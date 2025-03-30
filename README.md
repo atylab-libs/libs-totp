@@ -13,9 +13,9 @@ composer require atylab-libs/totp
 use AtylabLibs\Totp;
 ```
 
-// TOTP
 
 ```
+// TOTPインスタンスを生成
 $totp = new Totp;
 
 // シード値の生成
