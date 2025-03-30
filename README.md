@@ -18,6 +18,9 @@ use AtylabLibs\Totp;
 ```
 $totp = new Totp;
 
+// シード値の生成
+$seed = $totp->createSeed();
+
 // 登録用シークレット生成
 $secret = $totp->convertSecret(<TOTP計算用シード値>);
 
