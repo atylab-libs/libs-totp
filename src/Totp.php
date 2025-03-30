@@ -141,4 +141,14 @@ class Totp
 
         return $otpString;
     }
+
+    public function createSeed($byteLength = 20): string
+    {
+        if ($byteLength < 1 || $byteLength > 32) {
+            throw new \InvalidArgumentException('Seed length must be between 1 and 32 bytes.');
+        }
+
+        $seed_tmp = random_bytes($byteLength);
+        return bin2hex($seed_tmp);
+    }
 }
